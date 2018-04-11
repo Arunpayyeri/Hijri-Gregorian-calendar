@@ -3,9 +3,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/white"
+
     android:orientation="vertical"
-    android:id="@+id/linear_calendar">
+    android:id="@+id/linear_calendar"
+    >
 
 
     <LinearLayout
@@ -30,7 +31,8 @@
             android:textAppearance="?android:attr/textAppearanceMedium"
             android:textColor="@color/white"
             android:textSize="16sp"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            android:visibility="gone"/>
 
     </LinearLayout>
 
@@ -85,7 +87,7 @@
 
                             <ImageView
                                 android:id="@+id/previousButton"
-                                android:layout_width="20dp"
+                                android:layout_width="0dp"
                                 android:layout_height="20dp"
                                 android:src="@drawable/mcv_action_previous" />
                         </RelativeLayout>
@@ -186,6 +188,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:background="@color/colorPrimary"
+                        android:visibility="gone"
                         android:gravity="center">
 
                         <TextView
@@ -218,7 +221,7 @@
         android:id="@+id/linear_bottom_button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/colorPrimary">
+        android:background="#187fab">
 
         <TextView
             android:id="@+id/tv_cancel"

@@ -1,47 +1,102 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".MainActivity">
 
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="selected date"
-        android:layout_centerHorizontal="true"
-        android:layout_above="@+id/textView"
-        android:textColor="@color/colorAccent"/>
 
-    <TextView
-        android:text="x/x/xxxx" android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_centerVertical="true"
-        android:layout_centerHorizontal="true"
-        android:padding="20dp"
-        android:id="@+id/textView"
-        android:gravity="center"
-        android:textStyle="bold"/>
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:id="@+id/linearh1"
+    android:weightSum="1">
+
 
     <Button
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Gregorian Calendar"
+        android:text="Gregorian"
         android:id="@+id/button"
         android:layout_below="@+id/textView"
         android:layout_marginTop="10dp"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:background="#187fab"
+        android:layout_weight=".5"/>
 
     <Button
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hirji Calendar"
+        android:text="Hirji"
         android:id="@+id/button22"
         android:layout_below="@+id/button"
         android:layout_marginTop="10dp"
+        android:background="#187fab"
+        android:layout_weight=".5"
         android:layout_centerHorizontal="true" />
+</LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="1">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="CHECK IN"
+            android:id="@+id/txttextchkin"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:textColor="@color/colorAccent"
+            android:layout_weight=".5"/>
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorAccent"
+            android:layout_alignParentTop="true"
+            android:text="CHECK OUT"
+            android:gravity="center"
+            android:layout_weight=".5"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        android:id="@+id/linhor">
+
+        <TextView
+            android:id="@+id/txtchkin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight=".5"
+            android:gravity="center"
+            android:text="" />
+
+        <TextView
+            android:id="@+id/txtchkout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight=".5"
+            android:gravity="center"
+            android:text="" />
+    </LinearLayout>
 
 
-</RelativeLayout>
+
+
+
+
+
+
+
+</LinearLayout>

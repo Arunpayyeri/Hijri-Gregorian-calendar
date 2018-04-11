@@ -129,7 +129,7 @@ public class MyCalendarView extends Dialog implements View.OnClickListener {
         try {
             super.onCreate(savedInstanceState);
             setContentView(R.layout.dialog_hijri_calendar_with_time);
-            getWindow().setLayout(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT);
+            getWindow().setLayout(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT);
             context = getContext();
 
             linear_calendar = (LinearLayout) findViewById(R.id.linear_calendar);
@@ -619,7 +619,9 @@ public class MyCalendarView extends Dialog implements View.OnClickListener {
 
     public void showDialog() {
         if(myDialog != null){
-            myDialog.show();
+
+//myDialog.setContentView(R.layout.activity_main);
+           myDialog.show();
         }
     }
 

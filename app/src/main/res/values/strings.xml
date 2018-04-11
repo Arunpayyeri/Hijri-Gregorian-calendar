@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">HijriCalTest</string>
+    <string name="app_name">Calendar Beta</string>
 
     <string name="hijri_date_picker_done" translatable="false">Done</string>
     <string name="hijri_date_picker_cancel" translatable="false">Cancel</string>
