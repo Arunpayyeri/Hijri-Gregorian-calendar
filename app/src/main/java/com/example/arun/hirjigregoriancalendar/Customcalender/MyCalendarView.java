@@ -1,6 +1,7 @@
 package com.example.arun.hirjigregoriancalendar.Customcalender;
 
 import android.annotation.SuppressLint;
+import android.app.DatePickerDialog;
 import android.app.Dialog;
 import android.content.Context;
 import android.content.res.ColorStateList;
@@ -26,6 +27,7 @@ import android.widget.Toast;
 
 
 import com.example.arun.hirjigregoriancalendar.Customcalender.calendar.CalendarInstance;
+import com.example.arun.hirjigregoriancalendar.Customcalender.calendar.MyCustomCalendar;
 import com.example.arun.hirjigregoriancalendar.R;
 import java.util.ArrayList;
 import java.util.Calendar;
@@ -158,7 +160,13 @@ public class MyCalendarView extends Dialog implements View.OnClickListener {
     }
 
     @Override
+
     public void onClick(View view) {
+
+
+
+
+
 
         TextView temp = (TextView) view;
 
@@ -189,6 +197,10 @@ public class MyCalendarView extends Dialog implements View.OnClickListener {
             timePicker.updateDay(selectday,calendarInstance.getCurrentMonth()+1,calendarInstance.getCurrentYear());
 
             if (MyCalendarView.language == Arabic.getLanguageValue()) {
+                Toast.makeText(context,calendarInstance.getDayOfMonth() + "/" + (calendarInstance.getCurrentMonth() + 1) + "/" + calendarInstance.getCurrentYear(), Toast.LENGTH_SHORT).show();
+            }
+            else
+            {
                 Toast.makeText(context,calendarInstance.getDayOfMonth() + "/" + (calendarInstance.getCurrentMonth() + 1) + "/" + calendarInstance.getCurrentYear(), Toast.LENGTH_SHORT).show();
             }
         }
@@ -490,6 +502,7 @@ public class MyCalendarView extends Dialog implements View.OnClickListener {
         yearTextView.setTextColor(context.getResources().getColor(R.color.colorPrimary));
     }
 
+
     private void initListener() {
 
         relative_previous.setOnClickListener(new View.OnClickListener() {
@@ -512,10 +525,12 @@ public class MyCalendarView extends Dialog implements View.OnClickListener {
         });
 
 
+
         tv_cancel.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 MyCalendarView.this.dismiss();
+
             }
         });
 

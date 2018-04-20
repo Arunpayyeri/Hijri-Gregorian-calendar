@@ -26,6 +26,7 @@
         android:layout_below="@+id/textView"
         android:layout_marginTop="10dp"
         android:layout_centerHorizontal="true"
+
         android:background="#187fab"
         android:layout_weight=".5"/>
 
@@ -91,12 +92,9 @@
             android:text="" />
     </LinearLayout>
 
-
-
-
-
-
-
-
-
+<!--
+<EditText
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    />-->
 </LinearLayout>

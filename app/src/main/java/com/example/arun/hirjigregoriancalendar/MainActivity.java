@@ -38,6 +38,8 @@ TextView txttextchkin, txtchkout;
 
             }
         });
+
+
         txtchkout=(TextView)findViewById(R.id.txtchkout);
         txtchkout.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -71,7 +73,7 @@ TextView txttextchkin, txtchkout;
 
 
 
-
+/*
 
         myCalendarView = MyCalendarView.getInstance(MainActivity.this,true);
 
@@ -87,7 +89,7 @@ TextView txttextchkin, txtchkout;
         myCalendarView.setEnableScrolling(true);
         myCalendarView.showDialog();
         myCalendarView.show();
-
+*/
 
 
 
